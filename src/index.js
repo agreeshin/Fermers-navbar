@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import "./index.css";
+import TopMenu from './TopMenu/TopMenu';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+window.topMenuComponent = {};
+
+window.topMenuComponent.createtopMenuComponent = function (
+  elementId
+) {
+  ReactDOM.render(
+    <TopMenu />,
+    document.getElementById(elementId)
+  );
+
+  let text = "";
+
+  let component = {};
+
+  //Объявляем свойство text, для синхронизации с Backend свойством (обработка запроса сервера)
+  Object.defineProperty(component, "text", {
+    get: function () {
+      return text;
+    },
+    set: function (value) {
+      text = value;
+    },
+  });
+
+  return component;
+};
+
+// Комментировать перед сборкой. Разкоменнтировать в режиме разработки:
+window.topMenuComponent.createtopMenuComponent("root");
