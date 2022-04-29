@@ -1,15 +1,1 @@
-@font-face {
-  font-family: "Neo-sans-pro-bold-italic"; 
-  src: url("./CommandPoint/fonts/neo-sans-pro-bold-italic.ttf") format("truetype"); 
-  font-style: normal; 
-  font-weight: normal; 
-}
 
-body {
-  /* background: url(../temp/background.JPG); */
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
