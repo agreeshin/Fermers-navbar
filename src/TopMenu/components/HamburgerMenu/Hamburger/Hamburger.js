@@ -3,7 +3,7 @@ import React from   'react';
 import HamburgerSvg from '../HamburgerSvg/HamburgerSvg';
 import styles from './Hamburger.module.css';
 
-const Hamburger = () => {
+const Hamburger = (props) => {
   return ( <div className={styles.hamburger}>
     <div className={styles['hamburger-cursor-area']}>
       <HamburgerSvg />
@@ -11,5 +11,4 @@ const Hamburger = () => {
   </div> );
 }
  
-export default Hamburger;<div>
-</div>
+export default Hamburger;
