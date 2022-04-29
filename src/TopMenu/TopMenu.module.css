@@ -7,9 +7,15 @@
 
 .top-menu {
   --top-menu-height: 70px;
+  --text-color: #00463B;
 
   width: 100%;
   height: var(--top-menu-height);
+  padding: 0 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   background: #FFFFFF;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }

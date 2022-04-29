@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Hamburger from './components/HamburgerMenu/Hamburger/Hamburger';
+
 import styles from './TopMenu.module.css';
 
 import { hamburgerMenuList } from './data';
@@ -11,9 +13,7 @@ const TopMenu = props => {
   console.log(hamburgerMenuList);
 
   return <div className={styles['top-menu']}>
-    <h1>
-      Hello TopMenu!
-    </h1>
+    <Hamburger />
   </div>
 };
 

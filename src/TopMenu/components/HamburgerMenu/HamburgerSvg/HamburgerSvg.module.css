@@ -1,0 +1,6 @@
+.svg {
+  /* height: calc( var(--top-menu-height) * 28 / 70 );
+  width: calc( var(--top-menu-height) * 36 / 70 ); */
+  height: 100%;
+  width: 100%;
+}

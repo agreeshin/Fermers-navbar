@@ -1,0 +1,13 @@
+.hamburger {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hamburger-cursor-area {
+  height: calc( var(--top-menu-height) * 28 / 70 + 1rem);
+  width: calc( var(--top-menu-height) * 36 / 70 + 1rem);
+  padding: 0.5rem;
+  cursor: pointer;
+}
