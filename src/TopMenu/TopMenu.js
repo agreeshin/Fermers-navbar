@@ -14,7 +14,7 @@ const TopMenu = props => {
 
 
   return <div className={styles['top-menu']}>
-    <Hamburger />
+    <Hamburger items={hamburgerMenuList}/>
     <Logo />
   </div>
 };

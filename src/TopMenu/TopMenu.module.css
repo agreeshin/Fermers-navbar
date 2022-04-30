@@ -1,13 +1,26 @@
+@font-face {
+  font-family: "Montserrat"; 
+  src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', Sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  background: #ededed;
 }
 
 .top-menu {
   --top-menu-height: 70px;
   --text-color: #00463B;
+  --bg-primary: #008C68;
+  --bg-secondary: #91E39B;
 
   width: 100%;
   height: var(--top-menu-height);
@@ -19,4 +32,15 @@
   gap: 0.8rem;
   background: #FFFFFF;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  white-space: nowrap;
+  font-size: 1.15rem
+}
+
+.top-menu ul {
+  list-style: none;
 }

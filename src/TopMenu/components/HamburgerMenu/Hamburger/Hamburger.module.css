@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .hamburger-cursor-area {
@@ -10,4 +11,9 @@
   width: calc( var(--top-menu-height) * 36 / 70 + 1rem);
   padding: 0.5rem;
   cursor: pointer;
+}
+
+.hamburger-popup {
+  top: var(--top-menu-height);
+  left: 0.5rem;
 }
