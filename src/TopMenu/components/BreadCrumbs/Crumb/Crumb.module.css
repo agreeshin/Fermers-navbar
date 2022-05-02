@@ -1,0 +1,27 @@
+.crumb-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  color: var(--text-color);
+}
+
+.crumb-container>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.crumb-content {
+  cursor: pointer;
+}
+
+.crumb-content:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.crumb-popup {
+  top: 100%;
+}

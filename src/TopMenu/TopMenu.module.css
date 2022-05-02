@@ -38,7 +38,7 @@ body {
   text-decoration: none;
   color: var(--text-color);
   white-space: nowrap;
-  font-size: 1.15rem
+  font-size: 1.15rem;
 }
 
 .top-menu ul {
