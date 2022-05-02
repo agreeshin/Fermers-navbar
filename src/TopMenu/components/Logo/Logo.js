@@ -1,6 +1,8 @@
 import React from "react";
 
-const Logo = () => {
+import styles from './Logo.module.css';
+
+const Logo = (props) => {
   return (
     <svg
       width="33"
@@ -8,6 +10,8 @@ const Logo = () => {
       viewBox="0 0 33 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={() => document.location.href = props.homePageAddress}
+      className={styles.logo}
     >
       <path
         d="M14.2501 0.817309L9.35216 5.71525C8.6804 6.38701 8.56168 8.17189 9.1836 8.79381L14.788 14.3982C15.2666 14.8768 17.0169 14.7742 17.714 14.0771C20.7306 11.0605 20.3758 3.35423 17.8662 0.844639C16.6292 -0.392307 14.8403 0.227043 14.2501 0.817309Z"
