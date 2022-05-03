@@ -11,10 +11,15 @@ class Crumb extends React.Component {
     super(props);
     this.state = { isMenuVisible: false };
     this.onCrumbClickHandler = this.onCrumbClickHandler.bind(this);
+    this.onCrumbDoubleClickHandler = this.onCrumbDoubleClickHandler.bind(this);
   }
 
   onCrumbClickHandler() {
     this.setState({ isMenuVisible: !this.state.isMenuVisible });
+  }
+
+  onCrumbDoubleClickHandler() {
+    document.location.href = this.props.crumb.link;
   }
 
   handleClickOutside = evt => {
@@ -27,6 +32,7 @@ class Crumb extends React.Component {
         <p
           className={styles["crumb-content"]}
           onClick={this.onCrumbClickHandler}
+          onDoubleClick={this.onCrumbDoubleClickHandler}
         >
           {this.props.crumb.text}&nbsp;
         </p>
@@ -36,6 +42,7 @@ class Crumb extends React.Component {
           <Popup
             items={this.props.crumb.submenu}
             className={styles["crumb-popup"]}
+            isSubmenusVisible={false}
           />
         )}
       </div>

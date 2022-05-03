@@ -15,6 +15,7 @@
 
 .crumb-content {
   cursor: pointer;
+  user-select: none;
 }
 
 .crumb-content:hover {
