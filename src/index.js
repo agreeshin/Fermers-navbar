@@ -4,13 +4,31 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import TopMenu from './TopMenu/TopMenu';
 
+// TEST DATA
+// TODO: replace with getting from the external environment
+import {
+  hamburgerMenuTree,
+  homePageUrl,
+  breadCrumbsTree,
+  breadCrumbsCurrentPointUrl,
+  menuItemClickHandler,
+  searchBarSubmitHandler
+} from "./test-data";
+
 window.topMenuComponent = {};
 
 window.topMenuComponent.createtopMenuComponent = function (
   elementId
 ) {
   ReactDOM.render(
-    <TopMenu />,
+    <TopMenu 
+      hamburgerMenuTree={hamburgerMenuTree}
+      homePageUrl={homePageUrl}
+      breadCrumbsTree={breadCrumbsTree}
+      breadCrumbsCurrentPointUrl={breadCrumbsCurrentPointUrl}
+      menuItemClickHandler={menuItemClickHandler}
+      searchBarSubmitHandler={searchBarSubmitHandler}
+    />,
     document.getElementById(elementId)
   );
 
@@ -18,7 +36,7 @@ window.topMenuComponent.createtopMenuComponent = function (
 
   let component = {};
 
-  //Объявляем свойство text, для синхронизации с Backend свойством (обработка запроса сервера)
+  // Объявляем свойство text, для синхронизации с Backend свойством (обработка запроса сервера)
   Object.defineProperty(component, "text", {
     get: function () {
       return text;

@@ -25,6 +25,9 @@ body {
   --top-menu-height: 70px;
   --input-fields-height: 40px;
   --text-size: 1.125rem;
+  /* --text-size: 1rem; */
+
+  --transition-time: 0.1s;
 
   width: 100%;
   height: var(--top-menu-height);

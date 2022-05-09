@@ -7,14 +7,6 @@ import SearchBar from "./components/SearchBar/SearchBar/SearchBar";
 
 import styles from "./TopMenu.module.css";
 
-import {
-  hamburgerMenuTree,
-  homePageUrl,
-  breadCrumbsTree,
-  breadCrumbsCurrentPointUrl,
-  menuItemClickHandler
-} from "./data";
-
 const TopMenu = (props) => {
 
   const [searchBarOptions, setSearchBarOptions] = useState([
@@ -36,17 +28,18 @@ const TopMenu = (props) => {
   return (
     <div className={styles["top-menu"]}>
       <Hamburger
-        items={hamburgerMenuTree}
-        menuItemClickHandler={menuItemClickHandler}
+        items={props.hamburgerMenuTree}
+        menuItemClickHandler={props.menuItemClickHandler}
       />
-      <Logo homePageUrl={homePageUrl} />
+      <Logo homePageUrl={props.homePageUrl} />
       <BreadCrumbs
-        list={breadCrumbsTree}
-        currentPointUrl={breadCrumbsCurrentPointUrl}
-        menuItemClickHandler={menuItemClickHandler}
+        list={props.breadCrumbsTree}
+        currentPointUrl={props.breadCrumbsCurrentPointUrl}
+        menuItemClickHandler={props.menuItemClickHandler}
       />
       <SearchBar 
         inputChangeHandler={searchBarInputChangeHandler}
+        submitHandler={props.searchBarSubmitHandler}
         options={searchBarOptions}
       />
     </div>

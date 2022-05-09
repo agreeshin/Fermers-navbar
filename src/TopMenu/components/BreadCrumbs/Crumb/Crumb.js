@@ -1,8 +1,9 @@
 import React from "react";
-// import onClickOutside from "react-onclickoutside";
+
 import { BsChevronRight } from "react-icons/bs";
 
-import Popup from "../../UI/PopupMenu/Popup/Popup";
+// import Popup from "../../UI/PopupMenu/Popup/Popup";
+import DropDown from "../CrumbDropDown/DropDown/DropDown";
 
 import styles from "./Crumb.module.css";
 
@@ -13,7 +14,6 @@ class Crumb extends React.Component {
   }
 
   onCrumbClickHandler() {
-    // document.location.href = this.props.crumb.url;
     this.props.crumbClickHandler(this.props.crumb.url);
   }
 
@@ -30,9 +30,9 @@ class Crumb extends React.Component {
         {!this.props.isLast && <BsChevronRight />}
         {!this.props.isLast && <p>&nbsp;</p>}
         {this.props.crumb.submenu !== undefined && (
-          <Popup
+          <DropDown
             items={this.props.crumb.submenu}
-            className={styles["crumb-popup"]}
+            className={styles["crumb-drop-down"]}
             isSubmenusVisible={true}
             itemClickHandler={this.props.crumbClickHandler}
           />
@@ -45,6 +45,7 @@ class Crumb extends React.Component {
 export default Crumb;
 
 // Old version with the opening of the menu by click:
+
 // class Crumb extends React.Component {
 //   constructor(props) {
 //     super(props);

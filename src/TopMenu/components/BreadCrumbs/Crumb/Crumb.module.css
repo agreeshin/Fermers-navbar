@@ -10,13 +10,12 @@
 .crumb-content {
   cursor: pointer;
   user-select: none;
-  transition: color 0.1s;
+  /* transition: color var(--transition-time); */
+  /* font-size: calc( var(--text-size) * 0.88 ); */
   font-size: var(--text-size);
 }
 
 .crumb-content:hover {
-  /* text-decoration: underline;
-  text-underline-offset: 3px; */
   color: var(--text-hover-color);
 }
 
@@ -24,13 +23,7 @@
   display: block;
 }
 
-.crumb-popup {
+.crumb-drop-down {
   top: 100%;
   display: none;
 }
-
-/* .crumb-popup li:hover {
-  background: #fff;
-  color: var(--text-hover-color);
-  transition: color 0.1s;
-} */

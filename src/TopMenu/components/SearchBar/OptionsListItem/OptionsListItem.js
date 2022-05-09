@@ -11,11 +11,11 @@ const OptionsListItem = ({ title, enteredValue }) => {
     titleThirdPart = title.substring(title.indexOf(enteredValue) + enteredValue.length)
   }
 
-  return <p className={styles["options-list__item"]}>
+  return <div className={styles["options-list__item"]}>
     <b>{titleFirstPart}</b>
     <span>{enteredValue}</span>
     <b>{titleThirdPart}</b>
-  </p>
+  </div>
 }
 
 export default OptionsListItem;

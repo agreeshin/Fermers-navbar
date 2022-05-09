@@ -6,7 +6,7 @@ import styles from './OptionsList.module.css';
 
 const OptionsList = ({ options, enteredValue }) => {
   return <ul className={styles["options-list"]}>
-    {options.map(option => <li>
+    {options.map(option => <li key={option.url}>
       <OptionsListItem title={option.title} enteredValue={enteredValue} />    
     </li>)}
   </ul>

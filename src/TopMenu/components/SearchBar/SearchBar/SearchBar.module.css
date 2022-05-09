@@ -31,7 +31,7 @@
   height: var(--input-fields-height);
   background: #FFFFFF;
   padding: 0 0.5rem;
-  font-size: 1.15rem;
+  font-size: var(--text-size);
   border: none;
   background: transparent;
   outline: none;
