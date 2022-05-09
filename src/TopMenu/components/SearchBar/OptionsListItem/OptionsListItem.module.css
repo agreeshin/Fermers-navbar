@@ -1,0 +1,14 @@
+.options-list__item {
+  width: 100%;
+  padding: 0.55rem 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: var(--text-size);
+  transition: color 0.1s;
+  user-select: none;
+}
+
+.options-list__item:hover {
+  color: var(--text-hover-color);
+}

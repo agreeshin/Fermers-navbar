@@ -14,7 +14,7 @@ class BreadCrumbs extends React.Component {
     const setPerentsChain = (list) => {
       if (
         crumbsChain.length !== 0 &&
-        crumbsChain[crumbsChain.length - 1].id === this.props.currentPointId
+        crumbsChain[crumbsChain.length - 1].url === this.props.currentPointUrl
       ) {
         return;
       }
@@ -22,11 +22,11 @@ class BreadCrumbs extends React.Component {
       for (let item of list) {
         if (
           crumbsChain.length !== 0 &&
-          crumbsChain[crumbsChain.length - 1].id === this.props.currentPointId
+          crumbsChain[crumbsChain.length - 1].url === this.props.currentPointUrl
         ) {
           return;
         }
-        if (item.id === this.props.currentPointId) {
+        if (item.url === this.props.currentPointUrl) {
           crumbsChain.push(item);
           return;
         } else if (item.submenu !== undefined) {
@@ -47,7 +47,14 @@ class BreadCrumbs extends React.Component {
     return (
       <div className={styles["bread-crumbs"]}>
         {crumbsChain.map((crumb, index) => {
-          return <Crumb crumb={crumb} key={crumb.id} isLast={index === crumbsChain.length - 1}/>;
+          return (
+            <Crumb
+              crumb={crumb}
+              key={crumb.url}
+              isLast={index === crumbsChain.length - 1}
+              crumbClickHandler={this.props.menuItemClickHandler}
+            />
+          );
         })}
       </div>
     );

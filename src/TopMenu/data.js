@@ -1,77 +1,91 @@
+// Data that the component receives from the external environment
+
 // const hamburgerMenuTree = [
-//   {id: "main", text: "Главная", link: "#"},
-//   {id: "mnemonic-scheme", text: "Мнемосхема", link: "#"},
-//   {id: "video-surveillance", text: "Видеонаблюдение", link: "#"},
-//   {id: "rights-settings", text: "Настройка прав", link: "#"},
-//   {id: "tasks", text: "Распоряжения/задачи", link: "#"},
-//   {id: "analitics", text: "Аналитика", link: "#"},
-//   {id: "process-profile", text: "Процессный профиль", link: "#"},
-//   {id: "system journal", text: "Системный журнал", link: "#"},
-//   {id: "configurator", text: "Конфигуратор", link: "#", submenu: [
-//     {id: "rack-conf", text: "Конфигуратор стеллажей", link: "#"},
-//     {id: "cameras-conf", text: "Конфигуратор камер", link: "#"},
-//     {id: "network-adr-conf", text: "Конфигуратор сетевых адресов", link: "#"}
+//   {title: "Главная", url: "#"},
+//   {title: "Мнемосхема", url: "#"},
+//   {title: "Видеонаблюдение", url: "#"},
+//   {title: "Настройка прав", url: "#"},
+//   {title: "Распоряжения/задачи", url: "#"},
+//   {title: "Аналитика", url: "#"},
+//   {title: "Процессный профиль", url: "#"},
+//   {title: "Системный журнал", url: "#"},
+//   {title: "Конфигуратор", url: "#", submenu: [
+//     {title: "Конфигуратор стеллажей", url: "#"},
+//     {title: "Конфигуратор камер", url: "#"},
+//     {title: "Конфигуратор сетевых адресов", url: "#"}
 //   ]},
-//   {id: "diagnostics", text: "Диагностика", link: "#"},
-//   {id: "agrotechnics", text: "Агротехника", link: "#"}
+//   {title: "Диагностика", url: "#"},
+//   {title: "Агротехника", url: "#"}
 // ];
 
-const homePageAddress = "http://localhost:3000/";
+const homePageUrl = "http://localhost:3000/";
 
 // Test data
 const breadCrumbsTree = [
-  {id: "main", text: "Главная", link: "#"},
-  {id: "mnemonic-scheme", text: "Мнемосхема", link: "#"},
-  {id: "video-surveillance", text: "Видеонаблюдение", link: "#", submenu: [
-    {id: "bumblebees", text: "Наблюдение за шмелями", link: "#"},
-    {id: "strawberry", text: "Фото клубники", link: "#"}
+  {title: "Главная", url: "http://localhost:3000/"},
+  {title: "Мнемосхема", url: "http://tiflografika.com/taktilnye-mnemoshemy"},
+  {title: "Видеонаблюдение", url: "https://securityrussia.com/blog/videonablyudenie.html", submenu: [
+    {title: "Наблюдение за шмелями", url: "https://www.youtube.com/"},
+    {title: "Фото клубники", url: "https://github.com/"}
   ]},
-  {id: "rights-settings", text: "Настройка прав", link: "#"},
-  {id: "tasks", text: "Распоряжения/задачи", link: "#"},
-  {id: "analitics", text: "Аналитика", link: "#"},
-  {id: "process-profile", text: "Процессный профиль", link: "#"},
-  {id: "system journal", text: "Системный журнал", link: "#"},
-  {id: "configurator", text: "Конфигуратор", link: "#", submenu: [
-    {id: "rack-conf", text: "Конфигуратор стеллажей", link: "#"},
-    {id: "cameras-conf", text: "Конфигуратор камер", link: "#", submenu: [
-      {id: "beehive-camera", text: "Камера улья", link: "#"},
-      {id: "employees-camera", text: "Камера сотрудников", link: "#"},
-      {id: "strawberry-camera", text: "Клубника", link: "#"}
+  {title: "Настройка прав", url: "https://burg.1cbit.ru/blog/nastroyka-prav-dostupa-1s-8/"},
+  {title: "Распоряжения/задачи", url: "https://www.pragmatist.ru/vlast-i-rukovodstvo/rasporyazhenie-kak-sposob-realizacii-vlasti.html"},
+  {title: "Аналитика", url: "https://www.purestorage.com/ru/knowledge/what-is-data-analytics.html"},
+  {title: "Процессный профиль", url: "https://habr.com/ru/company/iladaruli24/blog/300994/"},
+  {title: "Системный журнал", url: "https://help.ivanti.com/iv/help/ru_RU/isec/94/Topics/Agent-Client-System-Log.htm"},
+  {title: "Конфигуратор", url: "https://www.bmw.ru/ru/configurator.html", submenu: [
+    {title: "Конфигуратор стеллажей", url: "https://stellazhi-dlya-doma.ru/calculator/"},
+    {title: "Конфигуратор камер", url: "https://devline.ru/calc/", submenu: [
+      {title: "Камера улья", url: "https://webcams-online.ru/rossija/uljanovsk"},
+      {title: "Камера сотрудников", url: "https://www.digibi.ru/cgi-bin/mpcreator?action=web"},
+      {title: "Клубника", url: "https://hi-chef.ru/product/klubnika/"}
     ]},
-    {id: "network-adr-conf", text: "Конфигуратор сетевых адресов", link: "#"}
+    {title: "Конфигуратор сетевых адресов", url: "http://www.advanserv.ru/configurator/ip-calc/"}
   ]},
-  {id: "diagnostics", text: "Диагностика", link: "#"},
-  {id: "agrotechnics", text: "Агротехника", link: "#"}
+  {title: "Диагностика", url: "https://mcko.ru/diagnostic_requests/new"},
+  {title: "Агротехника", url: "https://agtz.ru/"}
 ];
 
-const breadCrumbsCurrentPointId = "beehive-camera";
+const breadCrumbsCurrentPointUrl = "https://webcams-online.ru/rossija/uljanovsk";
 
 // Test data
 let hamburgerMenuTree = [
-  {id: "main", text: "Главная", link: "#"},
-  {id: "mnemonic-scheme", text: "Мнемосхема", link: "#"},
-  {id: "video-surveillance", text: "Видеонаблюдение", link: "#"},
-  {id: "rights-settings", text: "Настройка прав", link: "#"},
-  {id: "tasks", text: "Распоряжения/задачи", link: "#", submenu: [
-    {id: "mnemonic-scheme", text: "Мнемосхема", link: "#"},
-  {id: "video-surveillance", text: "Видеонаблюдение", link: "#"}
+  {title: "Главная", url: "http://localhost:3000/"},
+  {title: "Мнемосхема", url: "http://tiflografika.com/taktilnye-mnemoshemy"},
+  {title: "Видеонаблюдение", url: "https://securityrussia.com/blog/videonablyudenie.html", submenu: [
+    {title: "Наблюдение за шмелями", url: "https://www.youtube.com/"},
+    {title: "Фото клубники", url: "https://github.com/"}
   ]},
-  {id: "analitics", text: "Аналитика", link: "#"},
-  {id: "process-profile", text: "Процессный профиль", link: "#"},
-  {id: "system journal", text: "Системный журнал", link: "#"},
-  {id: "configurator", text: "Конфигуратор", link: "#", submenu: [
-    {id: "rack-conf", text: "Конфигуратор стеллажей", link: "#"},
-    {id: "cameras-conf", text: "Конфигуратор камер", link: "#", submenu: [
-      {id: "rights-settings", text: "Настройка прав", link: "#"},
-      {id: "tasks", text: "Распоряжения/задачи", link: "#", submenu: [
-        {id: "rights-settings", text: "Настройка прав", link: "#"}
-      ]},
-      {id: "analitics", text: "Аналитика", link: "#"}
+  {title: "Настройка прав", url: "https://burg.1cbit.ru/blog/nastroyka-prav-dostupa-1s-8/"},
+  {title: "Распоряжения/задачи", url: "https://www.pragmatist.ru/vlast-i-rukovodstvo/rasporyazhenie-kak-sposob-realizacii-vlasti.html"},
+  {title: "Аналитика", url: "https://www.purestorage.com/ru/knowledge/what-is-data-analytics.html"},
+  {title: "Процессный профиль", url: "https://habr.com/ru/company/iladaruli24/blog/300994/"},
+  {title: "Системный журнал", url: "https://help.ivanti.com/iv/help/ru_RU/isec/94/Topics/Agent-Client-System-Log.htm"},
+  {title: "Конфигуратор", url: "https://www.bmw.ru/ru/configurator.html", submenu: [
+    {title: "Конфигуратор стеллажей", url: "https://stellazhi-dlya-doma.ru/calculator/"},
+    {title: "Конфигуратор камер", url: "https://devline.ru/calc/", submenu: [
+      {title: "Камера улья", url: "https://webcams-online.ru/rossija/uljanovsk"},
+      {title: "Камера сотрудников", url: "https://www.digibi.ru/cgi-bin/mpcreator?action=web"},
+      {title: "Клубника", url: "https://hi-chef.ru/product/klubnika/"}
     ]},
-    {id: "network-adr-conf", text: "Конфигуратор сетевых адресов", link: "#"}
+    {title: "Конфигуратор сетевых адресов", url: "http://www.advanserv.ru/configurator/ip-calc/"}
   ]},
-  {id: "diagnostics", text: "Диагностика", link: "#"},
-  {id: "agrotechnics", text: "Агротехника", link: "#"}
+  {title: "Диагностика", url: "https://mcko.ru/diagnostic_requests/new"},
+  {title: "Агротехника", url: "https://agtz.ru/"}
 ];
 
-export { hamburgerMenuTree, homePageAddress, breadCrumbsTree, breadCrumbsCurrentPointId };
+const menuItemClickHandler = url => {
+  console.log(url);
+};
+
+const searchBarInputChangeHandler = value => {
+  
+};
+
+export { 
+  hamburgerMenuTree,
+  homePageUrl,
+  breadCrumbsTree,
+  breadCrumbsCurrentPointUrl,
+  menuItemClickHandler
+};

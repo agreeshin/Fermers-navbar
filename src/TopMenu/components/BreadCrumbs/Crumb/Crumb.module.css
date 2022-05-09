@@ -7,22 +7,30 @@
   color: var(--text-color);
 }
 
-.crumb-container>div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .crumb-content {
   cursor: pointer;
   user-select: none;
+  transition: color 0.1s;
+  font-size: var(--text-size);
 }
 
 .crumb-content:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  /* text-decoration: underline;
+  text-underline-offset: 3px; */
+  color: var(--text-hover-color);
+}
+
+.crumb-container:hover>div {
+  display: block;
 }
 
 .crumb-popup {
   top: 100%;
+  display: none;
 }
+
+/* .crumb-popup li:hover {
+  background: #fff;
+  color: var(--text-hover-color);
+  transition: color 0.1s;
+} */

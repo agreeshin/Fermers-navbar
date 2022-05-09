@@ -9,10 +9,18 @@
   background-color: var(--bg-secondary);
 }
 
-.popup-list-item a {
+.popup-list-item__mousedown {
+  
+}
+
+.popup-list-item>p {
   width: 100%;
   padding: 0.55rem 2.4rem;
   font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(--text-color);
+  font-size: var(--text-size);
 }
 
 .popup-list-item svg {

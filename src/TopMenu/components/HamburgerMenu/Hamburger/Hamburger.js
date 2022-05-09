@@ -52,6 +52,7 @@ class Hamburger extends React.Component {
             items={this.props.items}
             className={styles["hamburger-popup"]}
             isSubmenusVisible={true}
+            itemClickHandler={this.props.menuItemClickHandler}
           />
         )}
       </div>

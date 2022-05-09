@@ -1,0 +1,76 @@
+.form {
+  width: 600px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  position: absolute;
+  top: calc( -0.5 * var(--input-fields-height) );
+  border: 1px solid #ACACAC;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* .container:hover {
+  border: 1px solid var(--text-color);
+} */
+
+.container__focus {
+  width: 100%;
+  position: absolute;
+  top: calc( -0.5 * var(--input-fields-height) );
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-input {
+  width: 100%;
+  height: var(--input-fields-height);
+  background: #FFFFFF;
+  padding: 0 0.5rem;
+  font-size: 1.15rem;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.text-input::placeholder {
+  color: #ACACAC;
+}
+
+.buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+  right: 0;
+  top: calc( var(--input-fields-height) / -2 );
+}
+
+.buttons button {
+  cursor: pointer;
+  width: var(--input-fields-height);
+  height: var(--input-fields-height);
+  transform: translateY(1px);
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button svg {
+  height: calc( var(--input-fields-height) * 0.5 );
+  width: calc( var(--input-fields-height) * 0.5 );
+}
+
+.pipe {
+  height: calc( var(--input-fields-height) * 0.6 );
+  width: 1px;
+  background-color: #ACACAC;
+  border-radius: 1px;
+}

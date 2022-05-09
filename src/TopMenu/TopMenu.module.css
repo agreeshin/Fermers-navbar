@@ -17,10 +17,14 @@ body {
 }
 
 .top-menu {
-  --top-menu-height: 70px;
   --text-color: #00463B;
+  --text-hover-color: #84D68E;
   --bg-primary: #008C68;
   --bg-secondary: #91E39B;
+
+  --top-menu-height: 70px;
+  --input-fields-height: 40px;
+  --text-size: 1.125rem;
 
   width: 100%;
   height: var(--top-menu-height);
@@ -38,7 +42,7 @@ body {
   text-decoration: none;
   color: var(--text-color);
   white-space: nowrap;
-  font-size: 1.15rem;
+  font-size: var(--text-size);
 }
 
 .top-menu ul {

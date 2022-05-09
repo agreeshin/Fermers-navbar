@@ -10,7 +10,7 @@ const Logo = (props) => {
       viewBox="0 0 33 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      onClick={() => document.location.href = props.homePageAddress}
+      onClick={() => document.location.href = props.homePageUrl}
       className={styles.logo}
     >
       <path

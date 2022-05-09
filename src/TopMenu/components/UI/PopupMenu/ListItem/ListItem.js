@@ -4,19 +4,24 @@ import BsChevronRight from "react-icons/bs";
 import Popup from "../Popup/Popup";
 import styles from "./ListItem.module.css";
 
-const ListItem = ({ text, link, submenu, isSubmenusVisible }) => {
+const ListItem = ({ title, url, submenu, isSubmenusVisible, clickHandler }) => {
+  const onClickHandler = () => {
+    clickHandler(url);
+  };
+
   return submenu === undefined ? (
     <li className={styles["popup-list-item"]}>
-      <a href={link}>{text}</a>
+      <p onClick={onClickHandler}>{title}</p>
     </li>
   ) : (
     <li className={styles["popup-list-item"]}>
-      <a href={link}>{text}</a>
+      <p onClick={onClickHandler}>{title}</p>
       {isSubmenusVisible && (
         <Popup
           items={submenu}
           className={styles["secondary-popup"]}
           isSubmenusVisible={isSubmenusVisible}
+          itemClickHandler={clickHandler}
         />
       )}
       {isSubmenusVisible && <svg
