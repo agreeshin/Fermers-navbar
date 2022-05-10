@@ -21,6 +21,7 @@ body {
   --text-hover-color: #84D68E;
   --bg-primary: #008C68;
   --bg-secondary: #91E39B;
+  --search-bar-inactive-color: #ACACAC;
 
   --top-menu-height: 70px;
   --input-fields-height: 40px;

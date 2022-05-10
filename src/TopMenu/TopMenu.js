@@ -40,6 +40,7 @@ const TopMenu = (props) => {
       <SearchBar 
         inputChangeHandler={searchBarInputChangeHandler}
         submitHandler={props.searchBarSubmitHandler}
+        itemClickHandler={props.searchBarItemClickHandler}
         options={searchBarOptions}
       />
     </div>

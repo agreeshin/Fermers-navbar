@@ -75,11 +75,15 @@ const breadCrumbsTree = [
 const breadCrumbsCurrentPointUrl = "https://webcams-online.ru/rossija/uljanovsk";
 
 const menuItemClickHandler = url => {
-  console.log(url);
+  console.log("Menu or bread crumb item click: ", url);
 };
 
+const searchBarItemClickHandler = url => {
+  console.log("Search bar item click: ", url);
+}
+
 const searchBarSubmitHandler = value => {
-  console.log("Submit", value);
+  console.log("Search bar text submit: ", value);
 };
 
 export { 
@@ -88,5 +92,6 @@ export {
   breadCrumbsTree,
   breadCrumbsCurrentPointUrl,
   menuItemClickHandler,
-  searchBarSubmitHandler
+  searchBarSubmitHandler,
+  searchBarItemClickHandler
 };

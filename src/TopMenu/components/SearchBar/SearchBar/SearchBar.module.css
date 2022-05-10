@@ -7,14 +7,10 @@
   width: 100%;
   position: absolute;
   top: calc( -0.5 * var(--input-fields-height) );
-  border: 1px solid #ACACAC;
+  border: 1px solid var(--search-bar-inactive-color);
   border-radius: 4px;
   background: #fff;
 }
-
-/* .container:hover {
-  border: 1px solid var(--text-color);
-} */
 
 .container__focus {
   width: 100%;
@@ -35,10 +31,11 @@
   border: none;
   background: transparent;
   outline: none;
+  color: var(--text-color);
 }
 
 .text-input::placeholder {
-  color: #ACACAC;
+  color: var(--search-bar-inactive-color);
 }
 
 .buttons {
@@ -61,11 +58,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--search-bar-inactive-color);
+}
+
+.buttons button:hover {
+  color: var(--text-color);
 }
 
 .buttons button svg {
-  height: calc( var(--input-fields-height) * 0.5 );
-  width: calc( var(--input-fields-height) * 0.5 );
+  height: calc( var(--input-fields-height) * 0.6 );
+  width: calc( var(--input-fields-height) * 0.6 );
 }
 
 .pipe {

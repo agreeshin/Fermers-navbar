@@ -12,7 +12,8 @@ import {
   breadCrumbsTree,
   breadCrumbsCurrentPointUrl,
   menuItemClickHandler,
-  searchBarSubmitHandler
+  searchBarSubmitHandler,
+  searchBarItemClickHandler
 } from "./test-data";
 
 window.topMenuComponent = {};
@@ -28,6 +29,7 @@ window.topMenuComponent.createtopMenuComponent = function (
       breadCrumbsCurrentPointUrl={breadCrumbsCurrentPointUrl}
       menuItemClickHandler={menuItemClickHandler}
       searchBarSubmitHandler={searchBarSubmitHandler}
+      searchBarItemClickHandler={searchBarItemClickHandler}
     />,
     document.getElementById(elementId)
   );
