@@ -4,6 +4,7 @@ import Hamburger from "./components/HamburgerMenu/Hamburger/Hamburger";
 import Logo from "./components/Logo/Logo";
 import BreadCrumbs from "./components/BreadCrumbs/BreadCrumbs/BreadCrumbs";
 import SearchBar from "./components/SearchBar/SearchBar/SearchBar";
+import DropDown from "./components/UI/DropDownMenu/DropDown/DropDown";
 import Bell from "./components/Notifications/Bell/Bell";
 import Avatar from "./components/Avatar/Avatar/Avatar";
 
@@ -45,6 +46,7 @@ const TopMenu = (props) => {
         itemClickHandler={props.searchBarItemClickHandler}
         options={searchBarOptions}
       />
+      <DropDown list={props.farmsList} labelText="Ферма:" />
       <Bell />
       <Avatar user={props.currentUser} menuItems={props.userMenuItems}/>
     </div>

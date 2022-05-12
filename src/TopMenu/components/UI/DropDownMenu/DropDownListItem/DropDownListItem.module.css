@@ -1,0 +1,15 @@
+.item {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  height: var(--input-fields-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.item:hover {
+  background-color: var(--bg-secondary);
+}

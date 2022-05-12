@@ -77,6 +77,18 @@ const breadCrumbsTree = [
 
 const breadCrumbsCurrentPointUrl = "https://webcams-online.ru/rossija/uljanovsk";
 
+const farmsList = [
+  {title: "Челябинск 03", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Екатеринбург 01", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Екатеринбург 02", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Екатеринбург 03", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Каменск-Уральский 01", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Магнитогорск 01", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Первоуральск 01", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Челябинск 01", url: "https://hi-chef.ru/product/klubnika/"},
+  {title: "Челябинск 02", url: "https://hi-chef.ru/product/klubnika/"}
+];
+
 const userMenuItems = [
   {
     title: "Личный кабинет", 
@@ -124,6 +136,7 @@ export {
   homePageUrl,
   breadCrumbsTree,
   breadCrumbsCurrentPointUrl,
+  farmsList,
   userMenuItems,
   currentUser,
   menuItemClickHandler,

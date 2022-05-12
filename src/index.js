@@ -11,6 +11,7 @@ import {
   homePageUrl,
   breadCrumbsTree,
   breadCrumbsCurrentPointUrl,
+  farmsList,
   userMenuItems,
   currentUser,
   menuItemClickHandler,
@@ -29,6 +30,7 @@ window.topMenuComponent.createtopMenuComponent = function (
       homePageUrl={homePageUrl}
       breadCrumbsTree={breadCrumbsTree}
       breadCrumbsCurrentPointUrl={breadCrumbsCurrentPointUrl}
+      farmsList={farmsList}
       userMenuItems={userMenuItems}
       currentUser={currentUser}
       menuItemClickHandler={menuItemClickHandler}
