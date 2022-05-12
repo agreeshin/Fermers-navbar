@@ -11,10 +11,12 @@ import {
   homePageUrl,
   breadCrumbsTree,
   breadCrumbsCurrentPointUrl,
+  userMenuItems,
+  currentUser,
   menuItemClickHandler,
   searchBarSubmitHandler,
   searchBarItemClickHandler
-} from "./test-data";
+} from "./data";
 
 window.topMenuComponent = {};
 
@@ -27,6 +29,8 @@ window.topMenuComponent.createtopMenuComponent = function (
       homePageUrl={homePageUrl}
       breadCrumbsTree={breadCrumbsTree}
       breadCrumbsCurrentPointUrl={breadCrumbsCurrentPointUrl}
+      userMenuItems={userMenuItems}
+      currentUser={currentUser}
       menuItemClickHandler={menuItemClickHandler}
       searchBarSubmitHandler={searchBarSubmitHandler}
       searchBarItemClickHandler={searchBarItemClickHandler}

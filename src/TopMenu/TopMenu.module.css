@@ -21,6 +21,7 @@ body {
   --text-hover-color: #84D68E;
   --bg-primary: #008C68;
   --bg-secondary: #91E39B;
+  --bg-bio: #008C68;
   --search-bar-inactive-color: #ACACAC;
 
   --top-menu-height: 70px;
@@ -29,6 +30,7 @@ body {
   /* --text-size: 1rem; */
 
   --transition-time: 0.1s;
+  --on-hover-opacity: 0.8;
 
   width: 100%;
   height: var(--top-menu-height);

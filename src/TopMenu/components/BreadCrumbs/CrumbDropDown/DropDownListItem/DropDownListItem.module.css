@@ -5,10 +5,6 @@
   position: relative;
 }
 
-.drop-down-list-item:hover {
-
-}
-
 .drop-down-list-item:hover>p {
   color: var(--text-hover-color);
 }

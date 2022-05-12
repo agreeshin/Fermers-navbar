@@ -13,6 +13,7 @@
   /* transition: color var(--transition-time); */
   /* font-size: calc( var(--text-size) * 0.88 ); */
   font-size: var(--text-size);
+  white-space: nowrap;
 }
 
 .crumb-content:hover {

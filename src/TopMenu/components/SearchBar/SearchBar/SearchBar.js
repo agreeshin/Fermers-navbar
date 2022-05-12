@@ -1,9 +1,9 @@
 import React from "react";
 import onClickOutside from "react-onclickoutside";
 import { FiSearch } from 'react-icons/fi';
-import { GiCrossedSabres } from 'react-icons/gi';
 
 import OptionsList from "../OptionsList/OptionsList";
+import CrossSvg from "../CrossSvg/CrossSvg";
 
 import styles from "./SearchBar.module.css";
 
@@ -20,10 +20,6 @@ class SearchBar extends React.Component {
     this.onChangeHandler = this.onChangeHandler.bind(this);
     this.onInputFocusHandler = this.onInputFocusHandler.bind(this);
     this.onInputBlurHandler = this.onInputBlurHandler.bind(this);
-    this.onMagnifierMouseMoveHandler = this.onMagnifierMouseMoveHandler.bind(this);
-    this.onMagnifierMouseLeaveHandler = this.onMagnifierMouseLeaveHandler.bind(this);
-    this.onCrossMouseMoveHandler = this.onCrossMouseMoveHandler.bind(this);
-    this.onCrossMouseLeaveHandler = this.onCrossMouseLeaveHandler.bind(this);
     this.onSubmitHandler = this.onSubmitHandler.bind(this);
     this.onCrossClickHandler = this.onCrossClickHandler.bind(this);
     this.onMagnifierClickHandler = this.onMagnifierClickHandler.bind(this);
@@ -71,22 +67,6 @@ class SearchBar extends React.Component {
     this.setState({ isInputInFocus: false });
   }
 
-  onMagnifierMouseMoveHandler() {
-    this.setState({ isMagnifierHovered: true })
-  }
-
-  onMagnifierMouseLeaveHandler() {
-    this.setState({ isMagnifierHovered: false })
-  }
-
-  onCrossMouseMoveHandler() {
-    this.setState({ isCrossHovered: true })
-  }
-
-  onCrossMouseLeaveHandler() {
-    this.setState({ isCrossHovered: false })
-  }
-
   handleClickOutside = (evt) => {
     this.setState({ isOptionsVisible: false });
   };
@@ -126,27 +106,15 @@ class SearchBar extends React.Component {
             onMouseLeave={this.onCrossMouseLeaveHandler} 
             onClick={this.onCrossClickHandler}
           >
-            {/* {this.state.isCrossHovered ? 
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.4428 14.4438L18.9991 19.0001M16.7497 8.875C16.7497 13.2242 13.2239 16.75 8.87466 16.75C4.52542 16.75 0.999664 13.2242 0.999664 8.875C0.999664 4.52576 4.52542 1 8.87466 1C13.2239 1 16.7497 4.52576 16.7497 8.875Z" stroke="var(--text-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              :
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.4428 14.4438L18.9991 19.0001M16.7497 8.875C16.7497 13.2242 13.2239 16.75 8.87466 16.75C4.52542 16.75 0.999664 13.2242 0.999664 8.875C0.999664 4.52576 4.52542 1 8.87466 1C13.2239 1 16.7497 4.52576 16.7497 8.875Z" stroke="#ACACAC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>} */}
-              <GiCrossedSabres />
+            <div className={styles["icon-cross"]}>
+              <CrossSvg />
+            </div>
           </button>
           <div className={styles.pipe}></div>
-          <button 
-            onMouseOver={this.onMagnifierMouseMoveHandler} 
-            onMouseLeave={this.onMagnifierMouseLeaveHandler}
-            onClick={this.onMagnifierClickHandler}
-          >
-            {/* {this.state.isMagnifierHovered ? 
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.4428 14.4438L18.9991 19.0001M16.7497 8.875C16.7497 13.2242 13.2239 16.75 8.87466 16.75C4.52542 16.75 0.999664 13.2242 0.999664 8.875C0.999664 4.52576 4.52542 1 8.87466 1C13.2239 1 16.7497 4.52576 16.7497 8.875Z" stroke="var(--text-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            :
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.4428 14.4438L18.9991 19.0001M16.7497 8.875C16.7497 13.2242 13.2239 16.75 8.87466 16.75C4.52542 16.75 0.999664 13.2242 0.999664 8.875C0.999664 4.52576 4.52542 1 8.87466 1C13.2239 1 16.7497 4.52576 16.7497 8.875Z" stroke="#ACACAC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}             */}
+          <button onClick={this.onMagnifierClickHandler}>
+            <div className={styles["icon-search"]}>
               <FiSearch />
+            </div>
           </button>
         </div>
       </div>

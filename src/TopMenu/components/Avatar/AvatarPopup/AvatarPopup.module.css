@@ -1,0 +1,55 @@
+.container {
+  position: absolute;
+  background: #fff;
+  box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  right: 0;
+}
+
+.bio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--bg-bio);
+  color: #fff;
+}
+
+.image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  background: center;
+  background-size: cover;
+  flex-shrink: 0;
+  margin: 1rem;
+}
+
+.labels {
+  margin-right: 3rem;
+}
+
+.label-post {
+  font-size: calc( var(--text-size) * 0.78 );
+  line-height: calc( var(--text-size) * 0.948 );
+  font-weight: bold;
+}
+
+.label-surname {
+  font-size: var(--text-size);
+}
+
+.label-name {
+  white-space: nowrap;
+  font-size: calc( var(--text-size) * 0.78 );
+}
+
+.dummy {
+  background: inherit;
+  height: 0.8rem;
+}
+
+.menu {
+
+}

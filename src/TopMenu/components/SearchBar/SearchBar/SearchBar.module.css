@@ -1,5 +1,5 @@
 .form {
-  width: 600px;
+  width: 100%;
   position: relative;
 }
 
@@ -65,9 +65,28 @@
   color: var(--text-color);
 }
 
-.buttons button svg {
+.icon-search {
   height: calc( var(--input-fields-height) * 0.6 );
   width: calc( var(--input-fields-height) * 0.6 );
+}
+
+.icon-cross {
+  height: calc( var(--input-fields-height) * 0.38 );
+  width: calc( var(--input-fields-height) * 0.38 );
+}
+
+.icon-search svg {
+  height: 100%;
+  width: 100%;
+}
+
+.icon-cross svg {
+  height: 100%;
+  width: 100%;
+}
+
+.buttons button:hover .icon-cross svg path {
+  fill: var(--text-color);
 }
 
 .pipe {

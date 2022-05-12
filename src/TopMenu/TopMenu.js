@@ -4,6 +4,8 @@ import Hamburger from "./components/HamburgerMenu/Hamburger/Hamburger";
 import Logo from "./components/Logo/Logo";
 import BreadCrumbs from "./components/BreadCrumbs/BreadCrumbs/BreadCrumbs";
 import SearchBar from "./components/SearchBar/SearchBar/SearchBar";
+import Bell from "./components/Notifications/Bell/Bell";
+import Avatar from "./components/Avatar/Avatar/Avatar";
 
 import styles from "./TopMenu.module.css";
 
@@ -43,6 +45,8 @@ const TopMenu = (props) => {
         itemClickHandler={props.searchBarItemClickHandler}
         options={searchBarOptions}
       />
+      <Bell />
+      <Avatar user={props.currentUser} menuItems={props.userMenuItems}/>
     </div>
   );
 };

@@ -1,7 +1,10 @@
 .logo {
   cursor: pointer;
+  width: 33;
+  height: 32;
+  flex-shrink: 0;
 }
 
 .logo:hover {
-  opacity: 0.8;
+  opacity: var(--on-hover-opacity);
 }

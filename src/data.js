@@ -1,5 +1,8 @@
 // Data that the component receives from the external environment
 
+import { BiUser, BiHelpCircle, BiExit } from 'react-icons/bi';
+import { FiSettings } from 'react-icons/fi';
+
 const hamburgerMenuTree = [
   {title: "Главная", url: "http://localhost:3000/"},
   {title: "Мнемосхема", url: "http://tiflografika.com/taktilnye-mnemoshemy"},
@@ -74,6 +77,36 @@ const breadCrumbsTree = [
 
 const breadCrumbsCurrentPointUrl = "https://webcams-online.ru/rossija/uljanovsk";
 
+const userMenuItems = [
+  {
+    title: "Личный кабинет", 
+    url: "https://lkfl2.nalog.ru/lkfl/",
+    icon: <BiUser />
+  },
+  {
+    title: "Настройки", 
+    url: "https://rg.ru/2021/12/28/kakie-nastrojki-v-android-nuzhno-skoree-vykliuchit.html",
+    icon: <FiSettings />
+  },
+  {
+    title: "Помощь", 
+    url: "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BC%D0%BE%D1%89%D1%8C",
+    icon: <BiHelpCircle />
+  },
+  {
+    title: "Выход", 
+    url: "https://autism.help/",
+    icon: <BiExit />
+  }
+]
+
+const currentUser = {
+  id: "user1",
+  fio: "Лукманова Ульяна Михайловна",
+  post: "Инженер",
+  avatarUrl: "https://img5.goodfon.ru/wallpaper/nbig/6/72/sofiia-zhuravets-fotomodel-devushka-ulybka-portret.jpg"
+};
+
 const menuItemClickHandler = url => {
   console.log("Menu or bread crumb item click: ", url);
 };
@@ -91,6 +124,8 @@ export {
   homePageUrl,
   breadCrumbsTree,
   breadCrumbsCurrentPointUrl,
+  userMenuItems,
+  currentUser,
   menuItemClickHandler,
   searchBarSubmitHandler,
   searchBarItemClickHandler

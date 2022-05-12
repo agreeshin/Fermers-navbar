@@ -6,5 +6,5 @@
 }
 
 .svg:hover {
-  opacity: 0.8;
+  opacity: var(--on-hover-opacity);
 }
