@@ -21,7 +21,7 @@ const AvatarPopup = ({ user, menuItems }) => {
       <div className={styles.dummy}></div>
       <ul>
         {menuItems.map(item => {
-          return <PopupItem title={item.title} url={item.url} icon={item.icon}/>
+          return <PopupItem title={item.title} url={item.url} icon={item.icon} key={item.url} />
         })}
       </ul>      
     </div>

@@ -16,7 +16,8 @@ import {
   currentUser,
   menuItemClickHandler,
   searchBarSubmitHandler,
-  searchBarItemClickHandler
+  searchBarItemClickHandler,
+  farmSelectHandler
 } from "./data";
 
 window.topMenuComponent = {};
@@ -36,6 +37,7 @@ window.topMenuComponent.createtopMenuComponent = function (
       menuItemClickHandler={menuItemClickHandler}
       searchBarSubmitHandler={searchBarSubmitHandler}
       searchBarItemClickHandler={searchBarItemClickHandler}
+      farmSelectHandler={farmSelectHandler}
     />,
     document.getElementById(elementId)
   );

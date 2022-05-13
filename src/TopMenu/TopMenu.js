@@ -46,7 +46,7 @@ const TopMenu = (props) => {
         itemClickHandler={props.searchBarItemClickHandler}
         options={searchBarOptions}
       />
-      <DropDown list={props.farmsList} labelText="Ферма:" />
+      <DropDown list={props.farmsList} itemSelectHandler={props.farmSelectHandler} labelText="Ферма:" />
       <Bell />
       <Avatar user={props.currentUser} menuItems={props.userMenuItems}/>
     </div>

@@ -31,9 +31,9 @@ class DropDown extends Component {
         <div className={this.state.isListVisible ? styles["drop-down-opened"] : styles["drop-down-closed"]}>
           <div className={styles["select-bar"]} onClick={this.selectBarClickHandler}>
             <p>{this.props.list[0].title}</p>
-            <TriangleSvg />
+            <TriangleSvg isDirectionUp={this.state.isListVisible}/>
           </div>            
-          {this.state.isListVisible && <DropDownList list={this.props.list}/>}
+          {this.state.isListVisible && <DropDownList list={this.props.list} itemSelectHandler={this.props.itemSelectHandler}/>}
         </div>          
       </div>                
      );

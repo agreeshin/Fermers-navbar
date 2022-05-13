@@ -79,14 +79,14 @@ const breadCrumbsCurrentPointUrl = "https://webcams-online.ru/rossija/uljanovsk"
 
 const farmsList = [
   {title: "Челябинск 03", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Екатеринбург 01", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Екатеринбург 02", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Екатеринбург 03", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Каменск-Уральский 01", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Магнитогорск 01", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Первоуральск 01", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Челябинск 01", url: "https://hi-chef.ru/product/klubnika/"},
-  {title: "Челябинск 02", url: "https://hi-chef.ru/product/klubnika/"}
+  {title: "Екатеринбург 01", url: "https://2gis.ru/ekaterinburg/route/1267242985586852"},
+  {title: "Екатеринбург 02", url: "https://ekaterinburg.leroymerlin.ru/product/lestnica-pryamaya-lm-02-12664138/?utm_referrer=https%3A%2F%2Fwww.google.com%2F"},
+  {title: "Екатеринбург 03", url: "https://03ekb.ru/"},
+  {title: "Каменск-Уральский 01", url: "https://2gis.ru/k_uralskiy/geo/15341021885892091"},
+  {title: "Магнитогорск 01", url: "https://2gis.ru/magnitogorsk/route/3659780287627302"},
+  {title: "Первоуральск 01", url: "https://2gis.ru/pervouralsk/geo/1267273050516819"},
+  {title: "Челябинск 01", url: "https://74.ru/"},
+  {title: "Челябинск 02", url: "https://74.ru/text/2022/03/02/"}
 ];
 
 const userMenuItems = [
@@ -120,15 +120,19 @@ const currentUser = {
 };
 
 const menuItemClickHandler = url => {
-  console.log("Menu or bread crumb item click: ", url);
+  console.log("Selection of the main menu item or bread crumbs. Url:", url);
 };
 
 const searchBarItemClickHandler = url => {
-  console.log("Search bar item click: ", url);
+  console.log("Selection of the search bar item. Url:", url);
 }
 
 const searchBarSubmitHandler = value => {
-  console.log("Search bar text submit: ", value);
+  console.log("Search bar text submit. Value:", value);
+};
+
+const farmSelectHandler = url => {
+  console.log("Farm selection. Url:", url);
 };
 
 export { 
@@ -140,6 +144,7 @@ export {
   userMenuItems,
   currentUser,
   menuItemClickHandler,
+  searchBarItemClickHandler,
   searchBarSubmitHandler,
-  searchBarItemClickHandler
+  farmSelectHandler
 };
