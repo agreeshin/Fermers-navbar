@@ -30,25 +30,27 @@ const TopMenu = (props) => {
 
   return (
     <div className={styles["top-menu"]}>
-      <Hamburger
-        items={props.hamburgerMenuTree}
-        menuItemClickHandler={props.menuItemClickHandler}
-      />
-      <Logo homePageUrl={props.homePageUrl} />
-      <BreadCrumbs
-        list={props.breadCrumbsTree}
-        currentPointUrl={props.breadCrumbsCurrentPointUrl}
-        menuItemClickHandler={props.menuItemClickHandler}
-      />
-      <SearchBar 
-        inputChangeHandler={searchBarInputChangeHandler}
-        submitHandler={props.searchBarSubmitHandler}
-        itemClickHandler={props.searchBarItemClickHandler}
-        options={searchBarOptions}
-      />
-      <DropDown list={props.farmsList} itemSelectHandler={props.farmSelectHandler} labelText="Ферма:" />
-      <Bell />
-      <Avatar user={props.currentUser} menuItems={props.userMenuItems}/>
+      <div className={styles.container}>
+        <Hamburger
+          items={props.hamburgerMenuTree}
+          menuItemClickHandler={props.menuItemClickHandler}
+        />
+        <Logo homePageUrl={props.homePageUrl} />
+        <BreadCrumbs
+          list={props.breadCrumbsTree}
+          currentPointUrl={props.breadCrumbsCurrentPointUrl}
+          menuItemClickHandler={props.menuItemClickHandler}
+        />
+        <SearchBar 
+          inputChangeHandler={searchBarInputChangeHandler}
+          submitHandler={props.searchBarSubmitHandler}
+          itemClickHandler={props.searchBarItemClickHandler}
+          options={searchBarOptions}
+        />
+        <DropDown list={props.farmsList} itemSelectHandler={props.farmSelectHandler} labelText="Ферма:" />
+        <Bell />
+        <Avatar user={props.currentUser} menuItems={props.userMenuItems}/>
+      </div>      
     </div>
   );
 };

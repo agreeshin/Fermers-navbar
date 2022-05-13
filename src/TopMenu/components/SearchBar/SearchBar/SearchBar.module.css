@@ -1,4 +1,5 @@
 .form {
+  min-width: 280px;
   width: 100%;
   position: relative;
 }
@@ -26,7 +27,7 @@
   width: 100%;
   height: var(--input-fields-height);
   background: #FFFFFF;
-  padding: 0 0.5rem;
+  padding: 0 5rem 0 0.5rem;
   font-size: var(--text-size);
   border: none;
   background: transparent;

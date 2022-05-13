@@ -4,6 +4,7 @@
   box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.2);
   top: 100%;
   right: 0;
+  margin-right: 0.5rem;
 }
 
 .bio {
